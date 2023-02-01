@@ -1,0 +1,85 @@
+.header{
+    height: 56px;
+    background-color: black;
+    padding: 0 30px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3FD28B;
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-img{
+            height: 25px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    font-size: 14px;
+    list-style: none;
+    width: 550px;
+    align-items: center;
+    justify-content: space-around;
+
+    .badge-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .badge3,.badge1,.badge2{
+        position:absolute;
+        width: 17px;
+        height: 18px;
+        font-size: 12px;
+        background-color: #2A7FF3;
+        color: #FFFFFF;
+        border-radius: 10px;
+        padding-top: 1.5px;
+    }
+    
+    .badge1{
+        right: -7px;
+        top: -7px;
+    }
+    .badge2{
+        right: -12px;
+        top: -11px;
+    }
+    .badge3{
+        right: -8px;
+        top: -6px;
+        font-size: 8px;
+        background-color: white;
+        color: #222222;
+        padding-top: 4px;
+    }
+    #i1{
+        width:32px ;
+        height: 32px;
+        border-radius: 20px;
+        border: 2px solid #3FD28B;
+    }
+    .active{
+        color : white;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .navbar{
+        display: none;
+    }
+}
+@media screen and (min-width: 701px){
+    .hamburgmenu{
+        display: none;
+    }
+}

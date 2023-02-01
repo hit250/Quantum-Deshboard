@@ -1,0 +1,21 @@
+.about {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .commen {
+        font-size: 18px;
+        color: #1F7A54;
+    }
+
+    .unique {
+        color: #0000001F;
+        padding-left: 8px;
+        padding-right: 10px;
+    }
+}

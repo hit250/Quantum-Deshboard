@@ -1,0 +1,24 @@
+
+.footer {
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    color: #E0E1E1;
+
+    p {
+        color: #616161;
+        height: 15px;
+    }
+
+    img {
+        height: 24px;
+        width: 90px;
+    }
+
+    span {
+        color: #0000001F;
+        padding-left: 8px;
+        padding-right: 10px;
+    }
+}
