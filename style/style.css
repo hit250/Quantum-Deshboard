@@ -17,8 +17,7 @@
   height: 25px;
   margin-right: 5px;
 }
-
-.navbar {
+.header .right .navbar {
   display: flex;
   font-size: 14px;
   list-style: none;
@@ -26,14 +25,14 @@
   align-items: center;
   justify-content: space-around;
 }
-.navbar .badge-container {
+.header .right .navbar .badge-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.navbar .badge3, .navbar .badge1, .navbar .badge2 {
+.header .right .navbar .badge3, .header .right .navbar .badge1, .header .right .navbar .badge2 {
   position: absolute;
   width: 17px;
   height: 18px;
@@ -43,15 +42,15 @@
   border-radius: 10px;
   padding-top: 1.5px;
 }
-.navbar .badge1 {
+.header .right .navbar .badge1 {
   right: -7px;
   top: -7px;
 }
-.navbar .badge2 {
+.header .right .navbar .badge2 {
   right: -12px;
   top: -11px;
 }
-.navbar .badge3 {
+.header .right .navbar .badge3 {
   right: -8px;
   top: -6px;
   font-size: 8px;
@@ -59,13 +58,13 @@
   color: #222222;
   padding-top: 4px;
 }
-.navbar #i1 {
+.header .right .navbar #i1 {
   width: 32px;
   height: 32px;
   border-radius: 20px;
   border: 2px solid #3FD28B;
 }
-.navbar .active {
+.header .right .navbar .active {
   color: white;
 }
 
@@ -110,7 +109,6 @@
   justify-content: space-between;
   height: 45px;
   margin: 24px 0;
-  color: #686868;
 }
 .content .result .left-result {
   align-self: center;
@@ -122,7 +120,7 @@
   border: none;
   background-color: transparent;
   font-size: 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.168627451);
   width: 165px;
 }
 .content .card-display {

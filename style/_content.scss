@@ -35,7 +35,7 @@
         justify-content: space-between;
         height: 45px;
         margin: 24px 0;
-        color: #686868;
+
 
         .left-result {
             align-self: center;
@@ -48,7 +48,7 @@
                 border: none;
                 background-color: transparent;
                 font-size: 16px;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid #0000002b;
                 width: 165px;
             }
         }
@@ -73,7 +73,7 @@
             min-width: 450px;
             height: 246px;
             flex-grow: 1;
-            padding: 24px 16px 11px 24px; 
+            padding: 24px 16px 11px 24px;
     
             .card-img{
                 height: 157px;
