@@ -2,6 +2,7 @@
 @import "./content";
 @import "./about";
 @import "./fotter";
+@import "./colores.scss";
 
 * {
     margin: 0; 
@@ -9,7 +10,9 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-
+a{
+    text-decoration: none;
+}
 
 /* Utility classes */
 .space-between {

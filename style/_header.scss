@@ -1,20 +1,23 @@
+@import "./colores.scss";
+
 .header{
     height: 56px;
-    background-color: black;
+    background-color: $color1;
+    background-image: url("/icon/header\ pattern\ image.png");
     padding: 0 30px;
-    opacity: 0.8;
+    opacity: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #3FD28B;
+    color: $color11;
 
     .left{
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo-img{
-            height: 25px;
-            margin-right: 5px;
+            height: 35.99px;
+            margin-right: 134.02px;
         }
     }
     .right{
@@ -24,8 +27,14 @@
             list-style: none;
             width: 550px;
             align-items: center;
-            justify-content: space-around;
-        
+            justify-content: end;
+            
+            li{
+                padding-left: 32px;
+            }
+            li a{
+                color: $color11;
+            }
             .badge-container{
                 position: relative;
                 display: flex;
@@ -38,8 +47,8 @@
                 width: 17px;
                 height: 18px;
                 font-size: 12px;
-                background-color: #2A7FF3;
-                color: #FFFFFF;
+                background-color: $color10;
+                color: $color8;
                 border-radius: 10px;
                 padding-top: 1.5px;
             }
@@ -56,18 +65,18 @@
                 right: -8px;
                 top: -6px;
                 font-size: 8px;
-                background-color: white;
-                color: #222222;
+                background-color: $color8;
+                color: $color7;
                 padding-top: 4px;
             }
             #i1{
                 width:32px ;
                 height: 32px;
                 border-radius: 20px;
-                border: 2px solid #3FD28B;
+                border: 2px solid $color11;
             }
             .active{
-                color : white;
+                color : $color8;
             }
             
         }
@@ -76,12 +85,12 @@
 }
 
 
-@media screen and (max-width: 749px){
+@media screen and (max-width: 870px){
     .right{
         display: none;
     }
 }
-@media screen and (min-width: 750px){
+@media screen and (min-width: 871px){
     .hamburgmenu{
         display: none;
     }

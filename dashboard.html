@@ -22,11 +22,11 @@
             </div>
             <div class="right">
                 <ul class="navbar">
-                    <li class="active">DASHBOARD</li>
-                    <li>CONTENT</li>
-                    <li>USERS</li>
-                    <li>REPORTS</li>
-                    <li>ADMIN</li>
+                    <li><a class="active" href="#">DASHBOARD</a></li>
+                    <li><a href="#">CONTENT</a></li>
+                    <li><a href="#">USERS</a></li>
+                    <li><a href="#">REPORTS</a></li>
+                    <li><a href="#">ADMIN</a></li>
                     <li class="badge-container"><img style="height: 24px; width: 21px;" src="icon/alerts.svg" alt=""><span class="badge1">2</span></li>
                     <li class="badge-container"><img style="height: 20px; width: 20px;" src="icon/announcements.svg" alt=""><span class="badge2">1</span></li>
                     <li class="badge-container"><img id="i1" src="icon/IMG_20221206_224145_889.jpg" alt=""><span class="badge3">T</span></li>
@@ -41,7 +41,7 @@
         <div class="content">
             
             <div class="tabbar">
-                <div class="tab">
+                <div class="tab border">
                     <img  src="icon/courses.svg" alt="">
                     <span class="bold">4</span>Courses
                 </div>
@@ -63,11 +63,11 @@
                     <img style="margin-left: 24px;" src="./icon/sort.svg">
                 </div>
             </div>
-
+            <hr>
             
                 <div class="card-display">
-
-                    <div class="card">
+                    
+                    <div class="card card1">
                         <img src="images/imageMask.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -82,8 +82,9 @@
 
                             <div class="teacher-info">
                                 <div class="space-between">
-                                    <p class="teacher">Mr. Frank's Class B</p>
-                                    <img src="icon/arrow-down.svg">
+                                    <select name="teacher-detail" class="  teacher">
+                                        <option value="teacher-name">Mr. Frank's Class B</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -99,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card card2">
                         <img src="images/imageMask-1.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -114,20 +115,21 @@
 
                             <div class="teacher-info">
                                 <div class="space-between">
-                                    <p class="teacher">No Classes</p>
-                                    <img src="icon/arrow-down.svg" alt="" srcset="">
+                                    <select name="teacher-detail" class="  teacher uniqe-color">
+                                        <option value="teacher-name">No Classes</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="card-icons">
                             <img src="icon/preview.svg" alt="">
-                            <img src="icon/manage course.svg" alt="">
-                            <img src="icon/grade submissions.svg" alt="">
+                            <img class="low-opacity" src="icon/manage course.svg" alt="">
+                            <img class="low-opacity" src="icon/grade submissions.svg" alt="">
                             <img src="icon/reports.svg" alt="">
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card card1">
                         <img src="images/imageMask-2.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -142,8 +144,9 @@
 
                             <div class="teacher-info">
                                 <div class="space-between">
-                                    <p class="teacher">All Classes</p>
-                                    <img src="icon/arrow-down.svg" alt="" srcset="">
+                                    <select name="teacher-detail" class="  teacher">
+                                        <option value="teacher-name">All Classes</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -153,13 +156,13 @@
                         </div>
                         <div class="card-icons">
                             <img src="icon/preview.svg" alt="">
-                            <img src="icon/manage course.svg" alt="">
-                            <img src="icon/grade submissions.svg" alt="">
+                            <img class="low-opacity" src="icon/manage course.svg" alt="">
+                            <img class="low-opacity" src="icon/grade submissions.svg" alt="">
                             <img src="icon/reports.svg" alt="">
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card card2">
                             <img src="images/imageMask-3.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -174,8 +177,9 @@
 
                             <div class="teacher-info">
                                 <div class="space-between">
-                                    <p class="teacher">Mr. Frank's Class A</p>
-                                    <img src="icon/arrow-down.svg" alt="" srcset="">
+                                    <select name="teacher-detail" class="  teacher">
+                                        <option value="teacher-name">Mr. Frank'S Class A</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -209,7 +213,7 @@
         <div class="footer">
             <img src="icon/logo used in footer.svg" class="logo-img">
             <span >|</span>
-            <p> <span style="color: #616161;">Copyright @ 2020-2021</span> Zeus Systems Pvt. Ltd.  <span style="color: #616161;">All right reserved</span></p>
+            <p> <span>Copyright @ 2020-2021</span> Zeus Systems Pvt. Ltd.  <span>All right reserved</span></p>
         </div>
     </div>
 </body>

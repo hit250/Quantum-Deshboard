@@ -1,14 +1,21 @@
+@import "./colores.scss";
 
 .footer {
     display: flex;
     height: 45px;
     justify-content: center;
     align-items: center;
-    color: #E0E1E1;
+    background-color: $color12;
 
     p {
-        color: #616161;
+        color: $color13;
         height: 15px;
+        height: 15px;
+
+        span{
+            color: $color13;
+            height: 15px;
+        }
     }
 
     img {

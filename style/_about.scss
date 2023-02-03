@@ -1,3 +1,5 @@
+@import "./colores.scss";
+
 .about {
     margin-top: 40px;
     display: flex;
@@ -10,11 +12,11 @@
 
     .commen {
         font-size: 18px;
-        color: #1F7A54;
+        color: $color4;
     }
 
     .unique {
-        color: #0000001F;
+        color: $color1;
         padding-left: 8px;
         padding-right: 10px;
     }
