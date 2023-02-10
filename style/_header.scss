@@ -17,14 +17,15 @@
         justify-content: space-between;
         .logo-img{
             height: 35.99px;
-            margin-right: 134.02px;
+            width: 134.02px;
         }
     }
-    .right{
+    .middle{
         .navbar{
             display: flex;
             font-size: 14px;
             list-style: none;
+            padding-top: 5px;
             width: 550px;
             align-items: center;
             justify-content: end;
@@ -35,46 +36,7 @@
             li a{
                 color: $color11;
             }
-            .badge-container{
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            .badge3,.badge1,.badge2{
-                position:absolute;
-                width: 17px;
-                height: 18px;
-                font-size: 12px;
-                background-color: $color10;
-                color: $color8;
-                border-radius: 10px;
-                padding-top: 1.5px;
-            }
             
-            .badge1{
-                right: -7px;
-                top: -7px;
-            }
-            .badge2{
-                right: -12px;
-                top: -11px;
-            }
-            .badge3{
-                right: -8px;
-                top: -6px;
-                font-size: 8px;
-                background-color: $color8;
-                color: $color7;
-                padding-top: 4px;
-            }
-            #i1{
-                width:32px ;
-                height: 32px;
-                border-radius: 20px;
-                border: 2px solid $color11;
-            }
             .active{
                 color : $color8;
             }
@@ -82,16 +44,172 @@
         }
         
     }
+    .last {
+        ul{
+        display: flex;
+        list-style: none;
+        padding: 0px;
+    
+        li{
+            padding-left: 32px;
+        }
+        .badge-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .badge3,.badge1,.badge2{
+            position:absolute;
+            width: 17px;
+            height: 18px;
+            font-size: 12px;
+            background-color: $color10;
+            color: $color8;
+            border-radius: 10px;
+            padding-top: 1.5px;
+        }
+        
+        .badge1{
+            right: -7px;
+            top: -7px;
+        }
+        .badge2{
+            right: -12px;
+            top: -7px;
+        }
+        .badge3{
+            right: -8px;
+            top: -7px;
+            font-size: 8px;
+            background-color: $color8;
+            color: $color7;
+            padding-top: 4px;
+        }
+        #i1{
+            width:32px ;
+            height: 32px;
+            border-radius: 20px;
+        }
+        #hamburger-list{
+            cursor: pointer;
+            img{
+                width: 32px;
+                height: 32px;
+            }
+            #verticle-navbar {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0s, 0s, 0.2s;
+            }
+            .verticle-nav {
+                // height: 288px;
+                visibility:hidden;
+                opacity: 0;
+                z-index: 2;
+                position: absolute;
+                transform: translateY(-3em);
+                transition: all 0.3s ease 0s, visibility 0s linear 0.05s, z-index 0.3s linear 0.01s;
+
+                width: 280px;
+                box-shadow: 0px 13px 20px #0000003D;
+                background-color: $color8;
+                top: 59px;
+                right: 16px;   
+                // display: none; 
+                border-radius: 2px;
+    
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    li {
+                        margin: 0;
+                        display: block;
+                        // height: 18px;
+                        padding: 15px 24px 15px 16px;
+                        div {
+                            a {
+                                font-size: 14px;
+                                color: $color11;
+                                text-decoration: none;
+                            }
+                        }
+                        ul {
+                            display: none;
+                        }
+                    }
+                    .selected {
+                        background-color: $color14;
+                        // height: 66px;
+                        padding-bottom: 0;
+                        div {
+                            padding-bottom: 15px;
+                            div {
+                                transform: rotate(180deg);
+                            }
+                        }
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            display: block;
+
+                            li {
+                                margin: 0;
+                                display: block;
+                                height: 50px;
+                                padding: 15px 24px 15px 16px;
+                                a {
+                                    font-size: 14px;
+                                    color: $color11;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .hamburger-item { 
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                            div {
+                                // display: block;
+                                // transform: rotate(180deg);
+                                padding: 0;
+                                width: 12px;
+                                height: 12px;
+                                background-image: url("/icon/arrow-down.svg");
+                                background-size: 12px;
+                                background-position: top right;
+                                background-repeat: no-repeat;
+                                filter: invert(42%) sepia(8%) saturate(2891%) hue-rotate(103deg) brightness(91%) contrast(100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
 }
 
 
-@media screen and (max-width: 870px){
-    .right{
+@media screen and (max-width: 901px){
+    .middle{
         display: none;
     }
 }
-@media screen and (min-width: 871px){
-    .hamburgmenu{
+@media screen and (min-width: 900px){
+    #hamburger-list{
         display: none;
     }
 }
+
+.right{
+    display: flex;
+}
+

@@ -21,20 +21,85 @@
                 <img src="icon/logo used in header.svg" class="logo-img">
             </div>
             <div class="right">
+            <div class="middle">
                 <ul class="navbar">
                     <li><a class="active" href="#">DASHBOARD</a></li>
                     <li><a href="#">CONTENT</a></li>
                     <li><a href="#">USERS</a></li>
                     <li><a href="#">REPORTS</a></li>
                     <li><a href="#">ADMIN</a></li>
-                    <li class="badge-container"><img style="height: 24px; width: 21px;" src="icon/alerts.svg" alt=""><span class="badge1">2</span></li>
+                    </ul>
+                </div>
+                <div class="last">
+                <ul>
+                    <li class="badge-container alert-list">
+                        <img style="height: 24px; width: 21px;" src="icon/alerts.svg" alt="">
+                        <span class="badge1">
+                            2
+                        </span>
+                    </li>
                     <li class="badge-container"><img style="height: 20px; width: 20px;" src="icon/announcements.svg" alt=""><span class="badge2">1</span></li>
-                    <li class="badge-container"><img id="i1" src="icon/IMG_20221206_224145_889.jpg" alt=""><span class="badge3">T</span></li>
+                    <li class="badge-container"><img id="i1" src="icon/account_circle.svg" alt=""><span class="badge3">T</span></li>
+                    <li id="hamburger-list">
+                        <a href="#" id="hamburger-btn">
+                            <img src="icon/hamburger-menu.svg" alt="" srcset="">
+                        </a>
+                        <div class="verticle-nav">
+                            <ul class="verticle-ul">
+                                <li>
+                                    <div>
+                                        <a href="#">DASHBOARD</a>
+                                    </div>
+                                </li>
+                                <li class="hamburger-item">
+                                    <div>
+                                        <a href="#">CONTENT</a>
+                                        <div></div>
+                                    </div>
+                                    <ul class="sub-nav">
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                        <!-- <li><a href="#"> COURSE CATALOG </a></li> -->
+                                    </ul>
+                                </li>
+                                <li class="hamburger-item">
+                                    <div>
+                                        <a href="#">USERS</a>
+                                        <div></div>
+                                    </div>
+                                    <ul class="sub-nav">
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                    </ul>
+                                </li>
+                                <li class="hamburger-item">
+                                    <div>
+                                        <a href="#">REPORT</a>
+                                        <div></div>
+                                    </div>
+                                    <ul class="sub-nav">
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                    </ul>
+                                </li>
+                                <li class="hamburger-item">
+                                    <div>
+                                        <a href="#">ADMIN</a>
+                                        <div></div>
+                                    </div>
+                                    <ul class="sub-nav">
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                        <li><a href="#"> COURSE CATALOG </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
-                <div class="hamburgmenu">
-                    <img src="icon/hamburger-menu.svg" alt="" srcset="">
-            </div>
+        </div>
+
+        
+                
         </div>
 
 
@@ -43,16 +108,16 @@
             <div class="tabbar">
                 <div class="tab border">
                     <img  src="icon/courses.svg" alt="">
-                    <span class="bold">4</span>Courses
+                    <span class="bold courses-detail">4</span>Courses
                 </div>
                 <div class="tab">
                     <img  src="icon/classes.svg" alt="">
-                    <span class="bold">4</span>Classes
+                    <span class="bold classes-detail">4</span>Classes
                 </div>
             </div>
 
             <div class="result">
-                <div class="left-result">
+                <div class="left-result num">
                     Showing 4 of 4 courses
                 </div>
                 <div class="right-result">
@@ -67,7 +132,7 @@
             
                 <div class="card-display">
                     
-                    <div class="card card1">
+                    <div class="card">
                         <img src="images/imageMask.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -100,7 +165,7 @@
                         </div>
                     </div>
 
-                    <div class="card card2">
+                    <div class="card">
                         <img src="images/imageMask-1.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -129,7 +194,7 @@
                         </div>
                     </div>
 
-                    <div class="card card1">
+                    <div class="card">
                         <img src="images/imageMask-2.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -162,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="card card2">
+                    <div class="card">
                             <img src="images/imageMask-3.png" alt="" class="card-img">
                         <div class="details">
                             <div class="space-between mb-7">
@@ -216,5 +281,6 @@
             <p> <span>Copyright @ 2020-2021</span> Zeus Systems Pvt. Ltd.  <span>All right reserved</span></p>
         </div>
     </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
