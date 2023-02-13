@@ -1,0 +1,81 @@
+@import "./colores.scss";
+
+
+.notificationArea {
+    position: absolute;
+    width: 315px;
+    max-height: 582px;
+    height: max-content;
+    background-color: white;
+    box-shadow: 0px 13px 20px $color18;
+    right: 188px;
+    color: $color1;
+    font-size: 14px;
+    z-index: 1;
+    transform: scaleY(0);  
+    transition-delay: 0s, 0s, 0.2s;
+    
+}
+
+    .notifications {
+        max-height: 534px;
+        overflow-y: scroll;
+    }
+
+    .unread {
+        background-color: $color19;
+    }
+
+    .notification {
+        padding: 16px;
+    }
+        .notificationContent {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 8px;
+        }
+        .notificationContent p {
+                width: 260px;
+            }
+
+            .notificationContent  i {
+                width: 15px;
+                float: right;
+                color:$color4;
+            }
+
+        .notificationInfo {
+            font-size: 12px;
+            color: $color7;
+            padding-bottom: 8px;
+        }
+            .notificationInfo span {
+                color: $color2;
+            }
+        
+
+        .dateTime {
+            text-align: right;
+            font-size: 12px;
+            color: $color2;
+        }
+
+    .notificationBtn {
+        height: 48px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+        background: white 0% 0% no-repeat padding-box;
+        box-shadow: 0px 1px 6px $color18;
+        border-radius: 0px 0px 2px 2px;
+        opacity: 1;
+    }
+
+@media screen and (min-width: 861px) {
+    .notificationArea{
+        right: 125px;
+    }
+}
+

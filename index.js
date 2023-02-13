@@ -4,6 +4,7 @@ const classes_count = document.getElementsByClassName("classes-detail")[0];
 const num = document.getElementsByClassName("num")[0];
 
 
+
 async function getData() {
     const response = await fetch("javascript/data.json");
     const data = await response.json();
@@ -94,6 +95,11 @@ getData();
 const hamburger_list = document.getElementById("hamburger-list");
 const verticle_nav  = document.getElementsByClassName("verticle-nav")[0] ;
 const hamburger_items = document.getElementsByClassName("hamburger-item");
+const dropdown = document.querySelectorAll('.dropdown');
+const alertIcon = document.querySelector('.alert-icon');
+const notificationArea = document.querySelector('.notificationArea');
+const announcementIcon = document.querySelector('.announcement-icon');
+const announcementArea = document.querySelector('.announcementArea');
 
 let isin = false;
 
@@ -132,30 +138,80 @@ for(let item of Array.from(hamburger_items)) {
     });
 }
 
-let isinalert = false;
-alert_list.addEventListener("mouseenter", ()=> {
-    alert_icon_to_white.style.filter = "brightness(0) invert(1)";
-    // alert_div.style.display = "block";
-    // alert_div.style.visibility = "visible";
-    alert_div.setAttribute("id", "alert-div-hover");
-    alert_number_badge.style.display = "none";
-    console.log("mouse in");
-    isinalert = true;
-});
+for (let dropdownbtn of dropdown) {
+    dropdownbtn.addEventListener('click', () => {
+        const menuSubItems = dropdownbtn.children[1];
+        const dropdownArrow = dropdownbtn.children[0].children[0];
 
-alert_list.addEventListener("mouseleave", ()=> {
-    isinalert = false;
-    console.log("mouseleave");
-    if(alert_div.hasAttribute("id")) {
-        console.log("mouseleave");
-        setTimeout(()=>{
-            if(!isinalert) {
-                // alert_div.style.display = "none";
-                // alert_div.style.visibility = "hidden";
-                alert_div.removeAttribute("id");
-                alert_icon_to_white.style.filter = "none";
-                alert_number_badge.style.display = "flex";
-            }
-        },100)
-    }
-});
+        if (menuSubItems.style.display == "block") {
+            menuSubItems.style.display = 'none';
+            menuSubItems.style.height = '0px';
+            dropdownArrow.style.rotate = '90deg'
+        }
+        else {
+            menuSubItems.style.display = 'block';
+            menuSubItems.style.height = 'max-content';
+            dropdownArrow.style.rotate = '-90deg'
+        }
+    })
+}
+// submenu button script end
+
+
+// alert icon script start
+setTimeout(function(){
+    alertIcon.addEventListener('mouseover', () => {
+        notificationArea.style.transform = 'scaleY(1)';
+        alertIcon.children[1].style.display = 'none';
+        alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
+    
+    })
+ }, 1000);
+alertIcon.addEventListener('mouseover', () => {
+    notificationArea.style.transform = 'scaleY(1)';
+    alertIcon.children[1].style.display = 'none';
+    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
+
+})
+alertIcon.addEventListener('mouseout', () => {
+    notificationArea.style.transform = 'scaleY(0)'
+    alertIcon.children[1].style.display = 'flex';
+    alertIcon.children[1].style.paddingLeft = '4px';
+    alertIcon.children[0].style.filter = 'brightness(0) invert(1)' 
+})
+notificationArea.addEventListener('mouseover', ()=>{
+    notificationArea.style.transform = 'scaleY(1)'
+    alertIcon.children[1].style.display = 'none';
+    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
+})
+notificationArea.addEventListener('mouseout', () => {
+    notificationArea.style.transform = 'scaleY(0)'
+    alertIcon.children[1].style.display = 'flex';
+    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'  
+})
+// alert icon script end
+
+
+// announcement icon script start
+announcementIcon.addEventListener('mouseover', () => {
+    announcementArea.style.transform = 'scaleY(1)'
+    announcementIcon.children[1].style.display = 'none';
+    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
+})
+announcementIcon.addEventListener('mouseout', () => {
+    announcementArea.style.transform = 'scaleY(0)'
+    announcementIcon.children[1].style.display = 'flex';
+    announcementIcon.children[1].style.paddingLeft = '5px';
+    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
+})
+announcementArea.addEventListener('mouseover', () => {
+    announcementArea.style.transform = 'scaleY(1)'
+    announcementIcon.children[1].style.display = 'none';
+    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
+})
+announcementArea.addEventListener('mouseout', () => {
+    announcementArea.style.transform = 'scaleY(0)'
+    announcementIcon.children[1].style.display = 'flex';
+    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
+})
+// announcement icon script end

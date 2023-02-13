@@ -1,0 +1,75 @@
+@import "./colores.scss";
+
+.announcementArea {
+    position: absolute;
+    width: 315px;
+    height: max-content;
+    max-height: 582px;
+    right: 136px;
+    color: $color1;
+    font-size: 14px;
+    background-color: $color8;
+    box-shadow: 0px 3px 6px $color18;
+    z-index: 1;
+    transform: scaleY(0);
+    transition-delay: 0s, 0s, 0.2s;
+}
+    .announcements {
+        max-height: 534px;
+        overflow-y: scroll;
+    }
+        .announcement {
+            background-color: $color19;
+            padding: 16px;
+        }
+            .announcementCreater {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 8px;
+                font-size: 12px;
+            }
+            .announcementCreater span {
+                    color: $color2;
+                }
+            .announcementText{
+                padding-bottom: 8px;
+            }
+            .announcementInfo{
+                font-size: 12px;
+                color: $color2;
+            }
+                .dateTime{
+                    text-align:right;
+                }
+    .announcementBtns{
+        height: 48px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 1px 6px $color18;
+        border-radius: 0px 0px 2px 2px;
+        opacity: 1;
+        background-color: white;
+    }
+        .right-border{
+            border-right: 1px solid $color1;
+        }
+        .announcementBtn{
+            width: 50%;
+            text-align: center;
+            color: $color4;
+            padding: 6px;
+            background-color: aliceblue;
+        }
+    
+    .unread {
+        background-color: $color19;
+    }
+    .read{
+        background-color: $colocr19;
+    }
+
+@media screen and (min-width: 861px) {
+    .announcementArea{
+        right: 71px;
+    }
+}
