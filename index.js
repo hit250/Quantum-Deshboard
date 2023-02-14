@@ -6,7 +6,7 @@ const num = document.getElementsByClassName("num")[0];
 
 
 async function getData() {
-    const response = await fetch("javascript/data.json");
+    const response = await fetch("./javascript/data.json");
     const data = await response.json();
     const courses = data.courses;
 
@@ -93,7 +93,7 @@ getData();
 
 
 const hamburger_list = document.getElementById("hamburger-list");
-const verticle_nav  = document.getElementsByClassName("verticle-nav")[0] ;
+const verticle_nav = document.getElementsByClassName("verticle-nav")[0];
 const hamburger_items = document.getElementsByClassName("hamburger-item");
 const dropdown = document.querySelectorAll('.dropdown');
 const alertIcon = document.querySelector('.alert-icon');
@@ -103,35 +103,35 @@ const announcementArea = document.querySelector('.announcementArea');
 
 let isin = false;
 
-hamburger_list.addEventListener("mouseenter", ()=> {
+hamburger_list.addEventListener("mouseenter", () => {
     // verticle_navbar.style.display = "inline-block";
     verticle_nav.setAttribute("id", "verticle-navbar");
-    
+
     console.log("mouse in");
     isin = true;
 });
 
-hamburger_list.addEventListener("mouseleave", ()=> {
+hamburger_list.addEventListener("mouseleave", () => {
     isin = false;
     console.log("mouseleave");
-    if(verticle_nav.hasAttribute("id")) {
+    if (verticle_nav.hasAttribute("id")) {
         console.log("mouseleave");
-        setTimeout(()=>{
-            if(!isin) {
+        setTimeout(() => {
+            if (!isin) {
                 // verticle_navbar.style.display = "none";
                 // verticle_navbar.style.visibility = "hidden";
                 verticle_nav.removeAttribute("id");
                 //alert_icon_to_white.style.filter = "none";
             }
-        },300)
+        }, 300)
     }
-    
+
 });
 
-for(let item of Array.from(hamburger_items)) {
-    item.addEventListener("click", ()=> {
-        
-        for(let i of Array.from(hamburger_items)) {
+for (let item of Array.from(hamburger_items)) {
+    item.addEventListener("click", () => {
+
+        for (let i of Array.from(hamburger_items)) {
             i.classList.remove("selected");
         }
         item.classList.add("selected");
@@ -157,61 +157,49 @@ for (let dropdownbtn of dropdown) {
 }
 // submenu button script end
 
+let notificationVisible = false;
+let announcementVisible = false;
 
-// alert icon script start
-setTimeout(function(){
-    alertIcon.addEventListener('mouseover', () => {
+alertIcon.addEventListener('click', () => {
+    if (notificationVisible) {
+        notificationArea.style.transform = 'scaleY(0)';
+        alertIcon.children[1].style.display = 'flex';
+        alertIcon.children[0].style.filter = 'none';
+        notificationVisible = false;
+    } else {
         notificationArea.style.transform = 'scaleY(1)';
         alertIcon.children[1].style.display = 'none';
-        alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
-    
-    })
- }, 1000);
-alertIcon.addEventListener('mouseover', () => {
-    notificationArea.style.transform = 'scaleY(1)';
-    alertIcon.children[1].style.display = 'none';
-    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
+        alertIcon.children[0].style.filter = 'brightness(0) invert(1)';
+        alertIcon.children[1].style.paddingLeft = '4px';
+        notificationVisible = true;
+        // hide announcement area if visible
+        if (announcementVisible) {
+            announcementArea.style.transform = 'scaleY(0)';
+            announcementIcon.children[1].style.display = 'flex';
+            announcementIcon.children[0].style.filter = 'none';
+            announcementVisible = false;
+        }
+    }
+});
 
-})
-alertIcon.addEventListener('mouseout', () => {
-    notificationArea.style.transform = 'scaleY(0)'
-    alertIcon.children[1].style.display = 'flex';
-    alertIcon.children[1].style.paddingLeft = '4px';
-    alertIcon.children[0].style.filter = 'brightness(0) invert(1)' 
-})
-notificationArea.addEventListener('mouseover', ()=>{
-    notificationArea.style.transform = 'scaleY(1)'
-    alertIcon.children[1].style.display = 'none';
-    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'
-})
-notificationArea.addEventListener('mouseout', () => {
-    notificationArea.style.transform = 'scaleY(0)'
-    alertIcon.children[1].style.display = 'flex';
-    alertIcon.children[0].style.filter = 'brightness(0) invert(1)'  
-})
-// alert icon script end
-
-
-// announcement icon script start
-announcementIcon.addEventListener('mouseover', () => {
-    announcementArea.style.transform = 'scaleY(1)'
-    announcementIcon.children[1].style.display = 'none';
-    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
-})
-announcementIcon.addEventListener('mouseout', () => {
-    announcementArea.style.transform = 'scaleY(0)'
-    announcementIcon.children[1].style.display = 'flex';
-    announcementIcon.children[1].style.paddingLeft = '5px';
-    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
-})
-announcementArea.addEventListener('mouseover', () => {
-    announcementArea.style.transform = 'scaleY(1)'
-    announcementIcon.children[1].style.display = 'none';
-    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
-})
-announcementArea.addEventListener('mouseout', () => {
-    announcementArea.style.transform = 'scaleY(0)'
-    announcementIcon.children[1].style.display = 'flex';
-    announcementIcon.children[0].style.filter = 'brightness(0) invert(1)'
-})
-// announcement icon script end
+announcementIcon.addEventListener('click', () => {
+    if (announcementVisible) {
+        announcementArea.style.transform = 'scaleY(0)';
+        announcementIcon.children[1].style.display = 'flex';
+        announcementIcon.children[0].style.filter = 'none';
+        announcementIcon.children[1].style.paddingLeft = '5px';
+        announcementVisible = false;
+    } else {
+        announcementArea.style.transform = 'scaleY(1)';
+        announcementIcon.children[1].style.display = 'none';
+        announcementIcon.children[0].style.filter = 'brightness(0) invert(1)';
+        announcementVisible = true;
+        // hide notification area if visible
+        if (notificationVisible) {
+            notificationArea.style.transform = 'scaleY(0)';
+            alertIcon.children[1].style.display = 'flex';
+            alertIcon.children[0].style.filter = 'none';
+            notificationVisible = false;
+        }
+    }
+});

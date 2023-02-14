@@ -34,6 +34,7 @@
                 padding-left: 32px;
             }
             li a{
+                cursor: pointer;
                 color: $color11;
             }
             
@@ -59,6 +60,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            
         }
         
         .badge3,.badge1,.badge2{
@@ -70,6 +72,9 @@
             color: $color8;
             border-radius: 10px;
             padding-top: 1.5px;
+            img{
+                cursor: pointer;
+            }
         }
         
         .badge1{
