@@ -38,6 +38,24 @@
             "is_manage_course" : false
         },
         {
+            "image" : "images/imageMask.png",
+            "title" : "Acceleration",
+            "subject" : "physics",
+            "grade" : 7,
+            "grade_change" : 2,
+            "units" : 4,
+            "lesson" : 18,
+            "topics" :24,
+            "classes" : ["Mr. Frank's class B", "Mr. John's class B","Mr. Cassy's class C"],
+            "students" : 50,
+            "start_date" :"21-jan-2020",
+            "end_date" : "21-Aug-2020",
+            "is_favourite" : true,
+            "is_expired" : false,
+            "is_grade_submission" : true,
+            "is_manage_course" : true
+        },
+        {
             "image" : "/images/imageMask-2.png",
             "title" : "Introduction to Biology:micro organisus and how they affec...",
             "subject" : "Biology",
